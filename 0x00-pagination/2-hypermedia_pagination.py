@@ -40,7 +40,8 @@ class Server:
         page_content = self.dataset()[borders[0]:borders[1]]
         return page_content
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Union[int, List[List]]]:
+    def get_hyper(self, page: int = 1,
+                  page_size: int = 10) -> Dict[str, Union[int, List[List]]]:
         """ hypermedia metadata generator"""
         return {
             "page_size": page_size,
