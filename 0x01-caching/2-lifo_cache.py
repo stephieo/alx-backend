@@ -15,7 +15,7 @@ class LIFOCache(BaseCaching):
         if key is None or item is None:
             return
         elif len(self.cache_data) > BaseCaching.MAX_ITEMS:
-            discarded_key = self.cache_list.pop(-1)
+            discarded_key = self.cache_list.pop(len(cache_list) - 1)
             print(f"DISCARD: {discarded_key}")
             del self.cache_data[discarded_key]
         self.cache_list.append(key)
