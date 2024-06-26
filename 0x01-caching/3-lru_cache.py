@@ -16,9 +16,9 @@ class LRUCache(BaseCaching):
             return
 
         if key in self.use_list:
-            self.use_list.remove(key)
+            self.use_list.pop(self.use_list.index(key))
 
-        if len(self.cache_data) > BaseCaching.MAX_ITEMS:
+        if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             discarded_key = self.use_list.pop(0)
             del self.cache_data[discarded_key]
             print(f"DISCARD: {discarded_key}")
