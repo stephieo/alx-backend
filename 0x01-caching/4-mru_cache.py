@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-""" LRUCache class """
+""" MRUCache class """
 BaseCaching = __import__('base_caching').BaseCaching
 
 
-class LRUCache(BaseCaching):
-    """ LRU REMOVAL STRATEGY"""
+class MRUCache(BaseCaching):
+    """ MRU REMOVAL STRATEGY"""
     def __init__(self):
         """initialization method"""
         super().__init__()
@@ -17,9 +17,9 @@ class LRUCache(BaseCaching):
 
         if key in self.use_list:
             self.use_list.remove(key)
-        
+
         if len(self.cache_data) > BaseCaching.MAX_ITEMS:
-            discarded_key = self.use_list.pop(0)
+            discarded_key = self.use_list[-1]
             del self.cache_data[discarded_key]
             print(f"DISCARD: {discarded_key}")
         self.use_list.append(key)
