@@ -17,7 +17,7 @@ class LRUCache(BaseCaching):
 
         if key in self.use_list:
             self.use_list.remove(key)
-        
+
         if len(self.cache_data) > BaseCaching.MAX_ITEMS:
             discarded_key = self.use_list.pop(0)
             del self.cache_data[discarded_key]
