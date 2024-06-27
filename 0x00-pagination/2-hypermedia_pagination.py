@@ -41,7 +41,8 @@ class Server:
         return page_content
 
     def get_hyper(self, page: int = 1,
-                  page_size: int = 10) -> Dict[str, Union[int, List[List], None]]:
+                  page_size: int = 10) -> Dict[str,
+                                               Union[int, List[List], None]]:
         """ hypermedia metadata generator"""
         total_pages = math.ceil(len(self.dataset()) / page_size)
         return {
