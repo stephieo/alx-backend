@@ -39,7 +39,8 @@ class Server:
             }
         return self.__indexed_dataset
 
-    def get_hyper_index(self, index: Union[int, None] = None, page_size: int = 10) -> Dict:
+    def get_hyper_index(self, index: Union[int, None] = None,
+                        page_size: int = 10) -> Dict:
         """ returns a dictionary of info on data in current page,
         includes logic to skip deleted indices
         """
