@@ -15,7 +15,7 @@ def get_locale():
         return url_param
     else:
         return 'fr'
-    # return request.accept_languages.best_match(app.config['LANGUAGES'])
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
 babel = Babel(app, locale_selector=get_locale)
