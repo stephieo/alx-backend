@@ -10,13 +10,13 @@ def get_locale():
     """ function that determines the best language setting
     for the current HTTP request
     """
-    url_param = request.args.get("locale")
-    if url_param and url_param in app.config['LANGUAGES']:
-        return url_param
-    else:
-        return 'fr'
-    return request.accept_languages.best_match(app.config['LANGUAGES'])
-
+    # url_param = request.args.get("locale")
+    # if url_param and url_param in app.config['LANGUAGES']:
+    #     return url_param
+    # else:
+    #     return 'fr'
+    # return request.accept_languages.best_match(app.config['LANGUAGES'])
+    return request.args.get('locale', default='en')
 
 babel = Babel(app, locale_selector=get_locale)
 
@@ -34,7 +34,7 @@ app.config.from_object('1-app.Config')
 @app.route('/', strict_slashes=False)
 def index():
     """ route for index page of flask app """
-    return render_template('0-index.html')
+    return render_template('4-index.html')
 
 
 if __name__ == "__main__":

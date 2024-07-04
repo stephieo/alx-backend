@@ -20,7 +20,7 @@ app.config.from_object('1-app.Config')
 @app.route('/', strict_slashes=False)
 def index():
     """ route for index page of flask app """
-    return render_template('0-index.html')
+    return render_template('1-index.html')
 
 
 if __name__ == "__main__":
