@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ flask app with Babel setup"""
 from flask import Flask, render_template, request
-from flask_babel import Babel
+from flask_babel import Babel, gettext as _
 
 app = Flask(__name__)
 
@@ -17,6 +17,7 @@ def get_locale():
     #     return 'fr'
     # return request.accept_languages.best_match(app.config['LANGUAGES'])
     return request.args.get('locale', default='en')
+
 
 babel = Babel(app, locale_selector=get_locale)
 
