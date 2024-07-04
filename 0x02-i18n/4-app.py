@@ -10,7 +10,7 @@ def get_locale():
     """ function that determines the best language setting
     for the current HTTP request
     """
-    url_param = request.args.get("lang")
+    url_param = request.args.get("locale")
     if url_param and url_param in app.config['LANGUAGES']:
         return url_param
     else:
