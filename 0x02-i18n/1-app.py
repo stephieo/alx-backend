@@ -14,7 +14,7 @@ class Config():
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
 
-app.config.from_object('Config')
+app.config.from_object('1-app.Config')
 
 
 @app.route('/', strict_slashes=False)
