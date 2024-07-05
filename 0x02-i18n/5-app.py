@@ -5,6 +5,7 @@ from flask_babel import Babel, gettext as _, g
 
 app = Flask(__name__)
 
+
 class Config():
     """babel configuration"""
     LANGUAGES = ["en", "fr"]
@@ -12,6 +13,7 @@ class Config():
     BABEL_DEFAULT_TIMEZONE = "UTC"
     BABEL_TRANSLATION_DICTIONARIES = """/home/steph/alx-backend/
                                       0x02-i18n/translations"""
+
 
 def get_locale():
     """ function that determines the best language setting
@@ -61,4 +63,3 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
-

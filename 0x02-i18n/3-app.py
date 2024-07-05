@@ -21,7 +21,8 @@ class Config():
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
-    BABEL_TRANSLATION_DICTIONARIES = "/home/steph/alx-backend/0x02-i18n/translations"
+    BABEL_TRANSLATION_DICTIONARIES = """/home/steph/alx-backend/
+                                        0x02-i18n/translations"""
 
 
 app.config.from_object('1-app.Config')
