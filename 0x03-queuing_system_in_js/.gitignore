@@ -3,3 +3,5 @@ package.json
 package-lock.json
 .babelrc
 redis-7.4.0/
+.eslintrc.cjs
+jest.config.cjs
