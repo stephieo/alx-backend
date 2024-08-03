@@ -1,4 +1,6 @@
 #!/usr/bin/node
+// TODO: Revisit
+
 import express from 'express';
 import redis from 'redis';
 import { promisify } from 'util';

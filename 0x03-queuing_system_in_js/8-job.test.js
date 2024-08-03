@@ -1,4 +1,6 @@
 #!/usr/bin/node
+
+// TODO: Redo
 import createPushNotificationsJobs from './8-job';
 import kue from 'kue';
 import { expect } from 'chai';
